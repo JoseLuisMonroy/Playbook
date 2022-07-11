@@ -16,7 +16,7 @@ describe("Pruebas unitarias para User", () => {
         expect(test2.getusername).toBe("J0se");
         expect(test2.getname).toBe("Jose");
         expect(test2.getbio).toBe("Random");
-        expect(nuevUser.getdateCreated).not.toBeUndefined();
-        expect(nuevUser.getlastUpdated).not.toBeUndefined();
+        expect(test2.getdateCreated).not.toBeUndefined();
+        expect(test2.getlastUpdated).not.toBeUndefined();
     });
 });
