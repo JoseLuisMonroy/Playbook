@@ -1,0 +1,14 @@
+{
+    "name": "spiderverse",
+    "version": "1.0.0",
+    "description": "Diseño de software con TDD ",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "Jose Monroy",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^28.1.2"
+    }
+}
