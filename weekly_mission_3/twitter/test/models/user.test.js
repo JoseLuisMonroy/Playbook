@@ -10,4 +10,13 @@ describe("Pruebas unitarias para User", () => {
         expect(nuevUser.dateCreated).not.toBeUndefined();
         expect(nuevUser.lastUpdated).not.toBeUndefined();
     });
+    test('Caso 2 getters y setters', () => {
+        const test2 = new user("1", "J0se", "Jose", "Random");
+
+        expect(test2.getusername).toBe("J0se");
+        expect(test2.getname).toBe("Jose");
+        expect(test2.getbio).toBe("Random");
+        expect(nuevUser.getdateCreated).not.toBeUndefined();
+        expect(nuevUser.getlastUpdated).not.toBeUndefined();
+    });
 });
