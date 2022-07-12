@@ -7,4 +7,10 @@ describe("Pruebas unitarias para User view", () => {
 
         expect(result.error).toMatch(/Pago no encontrado/);
     });
+    test('Regresar un objeto nulo cuando se intenta crear un usaurio con pago pero propiedades invalidas', () => {
+        const payload = { username: null, name: "Jose", id: "1" };
+        const result = userView.create(payload);
+
+        expect(result.error).toMatch(/Necesita tener un valor válido/);
+    });
 });
