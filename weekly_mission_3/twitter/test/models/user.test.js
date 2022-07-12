@@ -1,4 +1,4 @@
-const user = require('../../app/models/user');
+const user = require('./../app/models/user');
 
 describe("Pruebas unitarias para User", () => {
     test('Caso 1 Crear un objeto de user', () => {
@@ -26,16 +26,5 @@ describe("Pruebas unitarias para User", () => {
         expect(test3.username).toBe("Monr0y");
         test3.bio = "IDK";
         expect(test3.bio).toBe("IDK");
-    });
-});
-
-describe("Pruebas unitarias para User service", () => {
-    test('Caso 1 Crear un objeto de useCrear un nuevo usuario usando user service', () => {
-        const test4 = new userService("1", "Monroy", "Jose");
-
-        expect(test4.id).toBe("1");
-        expect(test4.username).toBe("Monroy");
-        expect(test4.name).toBe("Jose");
-        expect(test4.bio).not.toBeUndefined();
     });
 });
