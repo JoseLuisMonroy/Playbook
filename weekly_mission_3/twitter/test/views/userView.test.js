@@ -17,6 +17,6 @@ describe("Pruebas unitarias para User view", () => {
         const payload = { username: "MonroyJF", name: "Jose" };
         const result = userView.create(payload);
 
-        expect(result.error).toMatch(/Hace falta un rubro/);
+        expect(result.error).toMatch(/Necesita tener un valor válido/);
     });
 });
