@@ -18,4 +18,10 @@ describe("Pruebas unitarias para User service", () => {
         expect(test5Lista[2]).toBe("Jose");
         expect(test5Lista[3]).toBe("Sin bio");
     });
+    test('Caso 3 Actualizar nombre de usuario', () => {
+        const test6 = userService.create("1", "Monroy", "Jose");
+        userService.uptadetUserUsername("MonroyJF");
+
+        expect(test6.username).toBe("MonroyJF");
+    })
 });
