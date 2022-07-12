@@ -24,4 +24,14 @@ describe("Pruebas unitarias para User service", () => {
 
         expect(test6.username).toBe("MonroyJF");
     })
+    test('Caso 4 Dada una lista de usuarios regresar una lista con unicamente los usernames', () => {
+        const test7_1 = userService.create("1", "J0s3", "Jose");
+        const test7_2 = userService.create("1", "Monroy", "Jose");
+        const test7_3 = userService.create("1", "MonroyJF", "Jose");
+        const test7_lista = userService.getUsernames([test7_1, test7_2, test7_3]);
+
+        expect(test7_lista).toContain("J0s3");
+        expect(test7_lista).toContain("Monroy");
+        expect(test7_lista).toContain("MonroyJF");
+    })
 });
