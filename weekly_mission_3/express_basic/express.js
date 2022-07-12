@@ -18,3 +18,8 @@ app.get('/explorers', (req, res) => {
     const explorer = { name: "Jose", age: "19" }
     res.send(explorer)
 });
+
+app.get('/explorers/:name', (req, res) => {
+    const explorer = { name: req.params.name, age: "19" }
+    res.send(explorer)
+});
