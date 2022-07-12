@@ -32,3 +32,16 @@ app.post('/v1/explorers', (req, res) => {
     const requestBody = req.body
     res.status(201).json({ mesage: "Created", explorer: requestBody })
 });
+
+app.put('/v1/explorers/:id', (req, res) => {
+    console.log(`API Explorers PUT request ${new Date()}`)
+    console.log(`Updating explorer with id: ${req.params.id}`)
+    const requestBody = req.body
+    res.status(200).json({ mesage: "Updated" })
+});
+
+app.delete('/v1/explorers/:id', (req, res) => {
+    console.log(`API Explorers DELETE request ${new Date()}`)
+    console.log(`Deleting explorer with id: ${req.params.id}`)
+    res.status(200).json({ mesage: "Deleted" })
+});
