@@ -19,4 +19,13 @@ describe("Pruebas unitarias para User view", () => {
 
         expect(result.error).toMatch(/Necesita tener un valor válido/);
     });
+    test('Verificar que se crea un usuario con todos los rubros', () => {
+        const payload = { username: "MonroyJF", name: "Jose", id: "1" };
+        const result = userView.create(payload);
+
+        expect(result.id).toBe("1");
+        expect(result.username).toBe("MonroyJF");
+        expect(result.name).toBe("Jose");
+        expect(result.bio).toBe("Sin bio");
+    });
 });
