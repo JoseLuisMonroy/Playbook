@@ -18,11 +18,17 @@ app.get('/v1/explorers', (req, res) => {
 });
 
 app.get('/v1/explorers/:id', (req, res) => {
-    console.log('API Explorers GET request ${new Date()}')
-    console.log('Getting explorer with id: ${req.params.id}')
+    console.log(`API Explorers GET request ${new Date()}`)
+    console.log(`Getting explorer with id: ${req.params.id}`)
     const explorer = { id: 1, name: "Jose", age: "19" }
     const explorer1 = { id: 2, name: "Jose", age: "19" }
     const explorer2 = { id: 3, name: "Juan", age: "20" }
     const explorers = [explorer, explorer1, explorer2]
     res.status(200).json(explorers[req.params.id - 1])
-})
+});
+
+app.post('/v1/explorers', (req, res) => {
+    console.log(`API Explorers POST request ${new Date()}`)
+    const requestBody = req.body
+    res.status(201).json({ mesage: "Created", explorer: requestBody })
+});
