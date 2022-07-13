@@ -2,12 +2,12 @@
     "name": "fizzbuzz",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "test": "jest"
     },
     "keywords": [],
-    "author": "",
+    "author": "Jose Monroy",
     "license": "ISC",
     "dependencies": {
         "jest": "^28.1.3"
