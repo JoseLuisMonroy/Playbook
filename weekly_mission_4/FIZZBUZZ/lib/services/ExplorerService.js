@@ -1,9 +1,12 @@
-exports.filterByMission = (explorers, mission) => {
-    explorers.filter((explorer) => explorer.mission == mission);
+class ExplorerService {
+    static filterByMission(explorers, mission) {
+        return explorers.filter((explorer) => explorer.mission == mission);
+    }
+    static getExplorersUsernamesByMission(explorers) {
+        return explorers.map((explorer) => explorer.githubUsername);
+    }
+    static getExplorersByTrick(explorers, trick) {
+        return explorers.filter((explorer) => explorer.trick == trick);
+    }
 }
-exports.getAmountOfExplorersByMission = (explorers, mission) => {
-    explorers.filter((explorer) => explorer.mission == mission).length;
-}
-exports.getExplorersUsernamesByMission = (explorers, mission) => {
-    explorers.filter((explorer) => explorer.mission == mission).map((explorer) => explorer.githubUsername);
-}
+module.exports = ExplorerService;
