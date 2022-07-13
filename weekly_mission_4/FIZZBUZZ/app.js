@@ -1,8 +1,6 @@
-const fs = require("fs");
+const reader = require("./lib/utils/Reader");
 
-// Part 1 Read json file ===========================
-const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);
+const explorers = reader.readJsonFile("explorers.json");
 
 // Part 2: Get the quantity of explorers names in node
 const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
