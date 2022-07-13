@@ -3,5 +3,4 @@ class fizzBuzzService {
 
     }
 }
-
 module.exports = fizzBuzzService;
