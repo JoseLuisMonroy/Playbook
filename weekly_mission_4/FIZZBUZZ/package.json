@@ -1,7 +1,7 @@
 {
     "name": "fizzbuzz",
     "version": "1.0.0",
-    "description": "",
+    "description": "Validación y cambio de atributos en un Json",
     "main": "app.js",
     "scripts": {
         "test": "jest"
