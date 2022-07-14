@@ -4,7 +4,7 @@
     "description": "Diseño de software con TDD ",
     "main": "index.js",
     "scripts": {
-        "test": "node ./node_modules/.bin/jest"
+        "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
     },
     "author": "Jose Monroy",
     "license": "ISC",
