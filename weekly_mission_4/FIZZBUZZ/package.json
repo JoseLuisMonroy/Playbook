@@ -4,7 +4,7 @@
     "description": "Validación y cambio de atributos en un Json",
     "main": "app.js",
     "scripts": {
-        "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+        "test": "jest"
     },
     "keywords": [],
     "author": "Jose Monroy",

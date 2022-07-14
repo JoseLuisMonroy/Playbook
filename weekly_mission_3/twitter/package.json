@@ -4,7 +4,7 @@
     "description": "Sprint 1",
     "main": "index.js",
     "scripts": {
-        "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+        "test": "jest"
     },
     "author": "Jose Monroy",
     "license": "ISC",
