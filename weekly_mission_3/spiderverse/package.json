@@ -1,17 +1,17 @@
 {
-  "name": "spiderverse",
-  "version": "1.0.0",
-  "description": "Diseño de software con TDD ",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "author": "Jose Monroy",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^28.1.2"
-  },
-  "directories": {
-    "test": "test"
-  }
+    "name": "spiderverse",
+    "version": "1.0.0",
+    "description": "Diseño de software con TDD ",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+    },
+    "author": "Jose Monroy",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^28.1.2"
+    },
+    "directories": {
+        "test": "test"
+    }
 }
