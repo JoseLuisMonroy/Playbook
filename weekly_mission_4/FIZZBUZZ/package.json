@@ -9,7 +9,7 @@
     "keywords": [],
     "author": "Jose Monroy",
     "license": "ISC",
-    "dependencies": {
-        "jest": "^28.1.3"
+    "devDependencies": {
+        "jest": "^27.5.1"
     }
 }
