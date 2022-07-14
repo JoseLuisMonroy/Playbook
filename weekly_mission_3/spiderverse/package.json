@@ -4,7 +4,7 @@
     "description": "Diseño de software con TDD ",
     "main": "index.js",
     "scripts": {
-        "test": "node ./node_modules/.bin/jest"
+        "test": "jest"
     },
     "author": "Jose Monroy",
     "license": "ISC",
