@@ -4,7 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "test": "jest"
+        "test": "node ./node_modules/.bin/jest"
     },
     "keywords": [],
     "author": "Jose Monroy",

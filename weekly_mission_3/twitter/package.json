@@ -4,7 +4,7 @@
     "description": "Sprint 1",
     "main": "index.js",
     "scripts": {
-        "test": "jest"
+        "test": "node ./node_modules/.bin/jest"
     },
     "author": "Jose Monroy",
     "license": "ISC",
