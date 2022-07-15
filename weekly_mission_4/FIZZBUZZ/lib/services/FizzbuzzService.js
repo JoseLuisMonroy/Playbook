@@ -13,7 +13,7 @@ class fizzBuzzService {
             explorer.trick = explorer.score;
             return explorer;
         }
-    };
+    }
     static applyValidationInNumber(number) {
         if (number % 3 === 0 && number % 5 === 0) {
             return "FIZZBUZZ";
@@ -24,7 +24,7 @@ class fizzBuzzService {
         } else {
             return number;
         }
-    };
+    }
 }
 
 module.exports = fizzBuzzService;
