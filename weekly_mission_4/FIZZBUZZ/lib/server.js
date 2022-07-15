@@ -32,3 +32,9 @@ app.get("/v1/explorers/usernames/:mission", (req, res) => {
     const usernames = ExplorerController.getExplorersUsernamesByMission(mission);
     res.send(usernames);
 });
+
+app.get("/v1/FIZZBUZZ/:number", (req, res) => {
+    const number = req.params.number;
+    const fizzBuzz = ExplorerController.applyValidationInNumber(number);
+    res.send(fizzBuzz);
+});
