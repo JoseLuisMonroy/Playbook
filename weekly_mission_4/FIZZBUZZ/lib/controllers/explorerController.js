@@ -18,5 +18,9 @@ class ExplorerController {
         const amount = explorersMission.length;
         return amount;
     }
+    static applyValidationInNumber(number) {
+        const fizzBuzz = FizzBuzzService.applyValidationInNumber(number);
+        return fizzBuzz;
+    }
 }
 module.exports = ExplorerController;

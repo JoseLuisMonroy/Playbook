@@ -21,4 +21,8 @@ describe("FizzBuzzService test", () => {
         const resultado4 = FizzbuzzService.applyValidationInExplorer(explorer15);
         expect(resultado4.trick).toBe("FIZZBUZZ");
     });
+    test("Caso 5 Validación sin asignacion en explorer", () => {
+        const resultado5 = FizzbuzzService.applyValidationInNumber(15);
+        expect(resultado5).toBe("FIZZBUZZ");
+    });
 });

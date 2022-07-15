@@ -16,4 +16,9 @@ describe("Pruebas para Explorer Controller", () => {
 
         expect(test3_resultado).toBe(10);
     });
+    test('Caso 4 Validar numero', () => {
+        const test4_resultado = explorerController.applyValidationInNumber(15);
+
+        expect(test4_resultado).toBe("FIZZBUZZ");
+    });
 });
