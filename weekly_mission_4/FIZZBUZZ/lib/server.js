@@ -19,3 +19,10 @@ app.get("/v1/explorers/:mission", (req, res) => {
     const explorersInMission = ExplorerController.getExplorersByMission(mission);
     res.send(explorersInMission);
 });
+
+app.get("/v1/explorers/amount/:mission", (req, res) => {
+    const mission = req.params.mission;
+    const amount = ExplorerController.getExplorersAmountByMission(mission);
+    const response = { mission, amount };
+    res.send(response);
+});
