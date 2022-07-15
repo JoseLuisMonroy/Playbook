@@ -38,3 +38,9 @@ app.get("/v1/FIZZBUZZ/:number", (req, res) => {
     const fizzBuzz = ExplorerController.applyValidationInNumber(number);
     res.send(fizzBuzz);
 });
+
+app.get("/v1/explorers/stack/:stack", (req, res) => {
+    const stack = req.params.stack;
+    const explorersInStack = ExplorerController.getExplorersByStack(stack);
+    res.send(explorersInStack);
+});

@@ -9,7 +9,7 @@ class ExplorerService {
         return explorers.filter((explorer) => explorer.trick == trick);
     }
     static getExplorersByStack(explorers, stack) {
-        return explorers.filter((explorer) => explorer.stack.includes(stack));
+        return explorers.filter((explorer) => explorer.stacks.includes(stack));
     }
 }
 module.exports = ExplorerService;
