@@ -26,3 +26,9 @@ app.get("/v1/explorers/amount/:mission", (req, res) => {
     const response = { mission, amount };
     res.send(response);
 });
+
+app.get("/v1/explorers/usernames/:mission", (req, res) => {
+    const mission = req.params.mission;
+    const usernames = ExplorerController.getExplorersUsernamesByMission(mission);
+    res.send(usernames);
+});
