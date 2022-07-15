@@ -28,4 +28,14 @@ describe("Pruebas para Explorer Service", () => {
 
         expect(test3_resultado.length).toBe(2);
     });
+    test('Caso 4 Obtener explorer por stack', () => {
+        const test4_1 = { nombre: "Juan", mision: "node", githubUsername: "juan", stack: "node, java" };
+        const test4_2 = { nombre: "Pedro", mision: "node", githubUsername: "pedro", stack: "node" };
+        const test4_3 = { nombre: "Maria", mision: "java", githubUsername: "maria", stack: "java" };
+        const test4_4 = { nombre: "Pedro", mision: "node", githubUsername: "juan", stack: "node" };
+        const test4_lista = [test4_1, test4_2, test4_3, test4_4];
+        const test4_resultado = ExplorerService.getExplorersByStack(test4_lista, "java");
+
+        expect(test4_resultado.length).toBe(2);
+    });
 });
