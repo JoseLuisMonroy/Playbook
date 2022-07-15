@@ -1,8 +1,8 @@
-const ExplorerService = require("./../services/ExplorerService");
-const FizzBuzzService = require("./../services/FizzBuzzService");
-const Reader = require("./../utils/Reader");
+const ExplorerService = require("../services/ExplorerService");
+const FizzBuzzService = require("../services/FizzBuzzService");
+const Reader = require("../utils/Reader");
 
-class ExplorerControler {
+class ExplorerController {
     static getExplorersByMission(mission) {
         const explorers = Reader.readJsonFile("explorers.json");
         const explorersMission = ExplorerService.filterByMission(explorers, mission);
@@ -19,4 +19,4 @@ class ExplorerControler {
         return amount;
     }
 }
-module.exports = ExplorerControler;
+module.exports = ExplorerController;
