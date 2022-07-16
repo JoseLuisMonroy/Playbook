@@ -2,7 +2,7 @@ const fs = require("fs");
 
 class reader {
     static readJsonFile(filePath) {
-        const rawdata = fs.readFileSync("explorers.json");
+        const rawdata = fs.readFileSync("./../../explorers.json");
         return JSON.parse(rawdata);
     }
 }
