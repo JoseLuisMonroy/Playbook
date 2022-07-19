@@ -6,6 +6,10 @@ class botController {
         const fizzbuzz = ExplorerController.applyValidationInNumber(numberToApplyFb);
         return botService.generateResponseFb(numberToApplyFb, fizzbuzz);
     }
+    static getExplorersByMission(mission) {
+        const usernames = ExplorerController.getExplorersUsernamesByMission(mission);
+        return botService.generateResponseExplorer(usernames, mission);
+    }
 }
 
 module.exports = botController;
