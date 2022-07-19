@@ -14,12 +14,18 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on("message", (msg) => {
     const chatId = msg.chat.id;
     const userMsg = parseInt(msg.text);
+    //convertir un texto a minusculas
+    const message = msg.text.toLowerCase();
 
     if (!isNaN(userMsg)) {
         const responseBot = botController.fizzbuzzTrick(userMsg);
         bot.sendMessage(chatId, responseBot);
-    } else if (msg.text === "/start") {
+    } else
+    if (message === "/start") {
         bot.sendMessage(chatId, "Hola, soy un bot que te ayuda a usar el API de FIZZBUZZ");
+    } else if (message === "java" || message === "node") {
+        const responseBot = botController.getExplorersByStack(message);
+        bot.sendMessage(chatId, responseBot);
     } else {
         bot.sendMessage(chatId, "PorFavor ingresa una misión valida");
     }
