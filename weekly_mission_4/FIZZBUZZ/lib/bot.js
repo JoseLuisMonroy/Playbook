@@ -1,7 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
-const ExplorerController = require("./controllers/explorerController");
+const botController = require("./controllers/BotController");
 
-const token = "";
+const token = "5440299349:AAFKyYZDBi5ABh5pg0w8LKAeDNOUItLZzR8";
 
 const bot = new TelegramBot(token, { polling: true });
 
@@ -13,14 +13,14 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 
 bot.on("message", (msg) => {
     const chatId = msg.chat.id;
-    const numberToApplyFb = parseInt(msg.text);
+    const userMsg = parseInt(msg.text);
 
-    if (!isNaN(numberToApplyFb)) {
-        const fizzbuzzTrick = ExplorerController.applyValidationInNumber(numberToApplyFb);
-        const responseBot = `Tu número es: ${numberToApplyFb}. Validación: ${fizzbuzzTrick}`;
+    if (!isNaN(userMsg)) {
+        const responseBot = botController.fizzbuzzTrick(userMsg);
         bot.sendMessage(chatId, responseBot);
+    } else if (msg.text === "/start") {
+        bot.sendMessage(chatId, "Hola, soy un bot que te ayuda a usar el API de FIZZBUZZ");
     } else {
-        bot.sendMessage(chatId, "Envía un número válido");
+        bot.sendMessage(chatId, "PorFavor ingresa una misión valida");
     }
-
 });
